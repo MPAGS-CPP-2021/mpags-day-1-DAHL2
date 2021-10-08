@@ -3,18 +3,23 @@
    08.10.21 */
 
 #include <iostream>
+#include <string>
 
 int main()
 {
-    int a{1};
-    a = a+a;
-    std::cout << a << std::endl;
+    const double pi {3.14159265359};
+    std::cout << pi << std::endl;
 
-    double b{64.923};
-    std::cout << b << std::endl;
+    int a{3};
+    /* compiler returns error:
+       "assignment of read-only variable ‘a’"
+       if a is set as const*/
+    a = a^a;
 
-    int c{b};
-    std::cout << c << std::endl;
+    std::string str {"This is a string!"};
+    std::cout << str << "\n";
+
+    return 0;
 }
 
 /* NOTES
