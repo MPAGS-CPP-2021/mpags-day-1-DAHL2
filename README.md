@@ -5,7 +5,7 @@ A command line tool for encrypting/decrypting text using classical ciphers.
 Dennis Lindebaum (University of Bristol)
 
 With assistance from:
-Mark Slater, Emir Muhamed, Tom Latham
+Mark Slater, Luke Kreczko, Tom Latham
 
 # How to install
 
