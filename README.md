@@ -1,10 +1,10 @@
 # mpags-cipher
-A simple command line tool for encrypting/decrypting text using classical ciphers
+A simple command line tool for encrypting/decrypting text using classical ciphers.
 
 # Authors
 Dennis Lindebaum (University of Bristol)
 
-With assistance from
+With assistance from:
 Mark Slater, Emir Muhamed, Tom Latham
 
 # How to install
