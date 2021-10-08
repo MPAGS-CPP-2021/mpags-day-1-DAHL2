@@ -13,10 +13,10 @@ int main()
     
     std::cout << pi*int1 << std::endl; // double
 
-    std::cout << pi/int1 << std::endl; // double
-    std::cout << int2/pi << std::endl; // double
-    std::cout << int1/int2 << std::endl; // int
-    std::cout << int2/int1 << std::endl; // int
+    std::cout << "Double / int: " << pi/int1 << std::endl; // double
+    std::cout << "Int / double: " << int2/pi << std::endl; // double
+    std::cout << "Int / int (3/4): " << int1/int2 << std::endl; // int
+    std::cout << "Int / int (4/3): " << int2/int1 << std::endl; // int
 
     char str_char {str[5]}; // N.B. First character of string is [0]
     std::cout << str_char << std::endl;
