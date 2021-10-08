@@ -13,9 +13,12 @@ int main()
     
     std::cout << pi*int1 << std::endl; // double
 
-    std::cout << "Double / int: " << pi/int1 << std::endl; // double
-    std::cout << "Int / double: " << int2/pi << std::endl; // double
-    std::cout << "Int / int (3/4): " << int1/int2 << std::endl; // int
+    // std::endl is effectively forcing a printout, which only need be done at the end of the block,
+    // however, this could mean that in case of an error, NONE of the block is printed out, rather
+    // rather than all bits before the error being printed
+    std::cout << "Double / int: " << pi/int1 << "\n"; // double
+    std::cout << "Int / double: " << int2/pi << "\n"; // double
+    std::cout << "Int / int (3/4): " << int1/int2 << "\n"; // int
     std::cout << "Int / int (4/3): " << int2/int1 << std::endl; // int
 
     char str_char {str[5]}; // N.B. First character of string is [0]
