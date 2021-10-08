@@ -4,9 +4,20 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
-int main()
+int main(int argc, char* argv[])
 {
+    const std::vector<std::string> cmdLineArgs {argv, argv+argc};
+
+    // Prints ou tthe command line arguments supplied
+    std::cout << "Supplied cmd line arguments:\n";
+    for (int i{0}; i < argc; i++)
+    {
+        std::cout << cmdLineArgs[i] << "\n";
+    }
+    std::cout << std::endl;
+
     // Blank string to store message
     std::string msg {""};
 
