@@ -11,7 +11,7 @@ int main()
     std::string msg {""};
 
     std::cout <<
-        "Please type in your message and use 'ctrl+D' to confirm it.\n"
+        "Please type in your message and use enter then ctrl+D to confirm it.\n"
         "Please note that special characters (including ' ') are not counted,\n"
         "and numbers are converted to words on a per digit basis.\n"
         << std::endl;
@@ -30,41 +30,33 @@ int main()
             switch(input_char)
             {
                 case '0':
-                    msg += "ZERO";
-                    break;
+                    msg += "ZERO"; break;
                 case '1':
-                    msg += "ONE";
-                    break;
+                    msg += "ONE"; break;
                 case '2':
-                    msg += "TWO";
-                    break;
+                    msg += "TWO"; break;
                 case '3':
-                    msg += "THREE";
-                    break;
+                    msg += "THREE"; break;
                 case '4':
-                    msg += "FOUR";
-                    break;
+                    msg += "FOUR"; break;
                 case '5':
-                    msg += "FIVE";
-                    break;
+                    msg += "FIVE"; break;
                 case '6':
-                    msg += "SIX";
-                    break;
+                    msg += "SIX"; break;
                 case '7':
                     msg += "SEVEN";
                     break;
                 case '8':
-                    msg += "EIGHT";
-                    break;
+                    msg += "EIGHT"; break;
                 case '9':
-                    msg += "NINE";
-                    break;
+                    msg += "NINE"; break;
             }
             // Need extra continue, since will not reach else
             // as this is only run if the character is a number
             continue;
         }
         else if (input_char<65 || input_char>90) {
+            // Exit without appending the message if not and upper case character
             continue;
         }
 
@@ -72,11 +64,6 @@ int main()
     }
 
     std::cout << msg << std::endl;
-    
-    
-    // - Ignore any other (non-alpha) characters
-    // - In each case, add result to a string variable
-    // print out the new string
 
     return 0;
 }
