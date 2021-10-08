@@ -7,22 +7,73 @@
 
 int main()
 {
-    const double pi {3.14159265359};
-    const int int1 {3}, int2 {4};
-    std::string str {"This is a string!"};
+    // Blank string to store message
+    std::string msg {""};
+
+    // Take each letter from user input and in each case:
+    char input_char {'x'};
+    while (std::cin >> input_char)
+    {
+        if (input_char>=97 && input_char<=122)
+        {
+            // Convert to upper case
+            // ASCII has all lower case letter 32 above upper case
+            input_char -= 32;
+            msg += input_char;
+        }
+        else if (input_char>=48 && input_char<=57)
+        {
+            // Only need to switch if input is a number
+            switch(input_char)
+            {
+                case '0':
+                    msg += "ZERO";
+                    break;
+                case '1':
+                    msg += "ONE";
+                    break;
+                case '2':
+                    msg += "TWO";
+                    break;
+                case '3':
+                    msg += "THREE";
+                    break;
+                case '4':
+                    msg += "FOUR";
+                    break;
+                case '5':
+                    msg += "FIVE";
+                    break;
+                case '6':
+                    msg.append("SIX");
+                    break;
+                case '7':
+                    msg += "SEVEN";
+                    break;
+                case '8':
+                    msg += "EIGHT";
+                    break;
+                case '9':
+                    msg += "NINE";
+                    break;
+            }
+            // Need extra continue, since will not reach else
+            // continue;
+        }
+        else if (input_char>=65 && input_char<=90) {
+            msg += input_char;
+            // continue;
+        }
+
+        //msg += input_char;
+    }
+
+    std::cout << msg <<std::endl;
     
-    std::cout << pi*int1 << std::endl; // double
-
-    // std::endl is effectively forcing a printout, which only need be done at the end of the block,
-    // however, this could mean that in case of an error, NONE of the block is printed out, rather
-    // rather than all bits before the error being printed
-    std::cout << "Double / int: " << pi/int1 << "\n"; // double
-    std::cout << "Int / double: " << int2/pi << "\n"; // double
-    std::cout << "Int / int (3/4): " << int1/int2 << "\n"; // int
-    std::cout << "Int / int (4/3): " << int2/int1 << std::endl; // int
-
-    char str_char {str[5]}; // N.B. First character of string is [0]
-    std::cout << str_char << std::endl;
+    
+    // - Ignore any other (non-alpha) characters
+    // - In each case, add result to a string variable
+    // print out the new string
 
     return 0;
 }
