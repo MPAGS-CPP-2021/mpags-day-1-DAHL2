@@ -8,16 +8,18 @@
 int main()
 {
     const double pi {3.14159265359};
-    std::cout << pi << std::endl;
-
-    int a{3};
-    /* compiler returns error:
-       "assignment of read-only variable ‘a’"
-       if a is set as const*/
-    a = a^a;
-
+    const int int1 {3}, int2 {4};
     std::string str {"This is a string!"};
-    std::cout << str << "\n";
+    
+    std::cout << pi*int1 << std::endl; // double
+
+    std::cout << pi/int1 << std::endl; // double
+    std::cout << int2/pi << std::endl; // double
+    std::cout << int1/int2 << std::endl; // int
+    std::cout << int2/int1 << std::endl; // int
+
+    char str_char {str[5]}; // N.B. First character of string is [0]
+    std::cout << str_char << std::endl;
 
     return 0;
 }
