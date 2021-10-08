@@ -20,13 +20,11 @@ int main()
     char input_char {'x'};
     while (std::cin >> input_char)
     {
-        if (input_char>=97 && input_char<=122)
-        {
-            // Convert to upper case
-            // ASCII has all lower case letter 32 above upper case
-            input_char -= 32;
-        }
-        else if (input_char>=48 && input_char<=57)
+        // Convert to upper case
+        // ASCII has all lower case letter 32 above upper case
+        input_char -= 32 * (input_char>=97 && input_char<=122);
+
+        if (input_char>=48 && input_char<=57)
         {
             // Only need to switch if input is a number
             switch(input_char)
