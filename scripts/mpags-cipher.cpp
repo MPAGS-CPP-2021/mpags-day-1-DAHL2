@@ -10,6 +10,8 @@ int main(int argc, char* argv[])
 {
     const std::vector<std::string> cmdLineArgs {argv, argv+argc};
 
+    // Is there a nice way to avoid defining i.e. in_path, here, since in_path
+    // isn't necessarily required?
     bool help_flag {false};
     bool i_flag {false};
     std::string in_path {""};
