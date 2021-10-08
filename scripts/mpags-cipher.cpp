@@ -10,13 +10,25 @@ int main(int argc, char* argv[])
 {
     const std::vector<std::string> cmdLineArgs {argv, argv+argc};
 
-    // Prints ou tthe command line arguments supplied
-    std::cout << "Supplied cmd line arguments:\n";
+    int help_flag {0};
+
+    // Prints out the command line arguments supplied
     for (int i{0}; i < argc; i++)
     {
-        std::cout << cmdLineArgs[i] << "\n";
+        help_flag += (cmdLineArgs[i] == "-h") + (cmdLineArgs[i] == "--help");
     }
-    std::cout << std::endl;
+
+    if (help_flag > 0)
+    {
+        std::cout <<
+            "Usage: mpaggs-cipher.cpp [options]\n"
+            "Options:\n"
+            "  --help       Displays this help text\n"
+            "  -h           Displays this help text\n"
+            "Further options to be populated as they are created.\n"
+            << std::endl;
+        return 0;
+    }
 
     // Blank string to store message
     std::string msg {""};
